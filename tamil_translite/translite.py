@@ -1,5 +1,7 @@
 import json
 import re
+import pkg_resources
+
 from .olipeyarppu import olipeyarppu
 
 json_file_path = pkg_resources.resource_filename(__name__, "translit_rules.json")
