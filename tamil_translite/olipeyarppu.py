@@ -6,7 +6,7 @@ mellinam = ["ங", "ஞ", "ண", "ந", "ம", "ன"]
 idaiyinam = ["ய", "ர", "ல", "வ", "ழ", "ள"]
 
 # Phonetic pronouncation
-json_file_path = "./tamil_translite/translit_rules.json"
+json_file_path = pkg_resources.resource_filename(__name__, "translit_rules.json")
 with open(json_file_path, "r", encoding="utf-8") as file:
     transliteration_rules = json.load(file)
 
