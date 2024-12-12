@@ -1,5 +1,5 @@
 import json
-
+import pkg_resources
 # list of vallinam,mellinam,idaiyinam
 vallinam = ["க", "ச", "ட", "த", "ப", "ற"]
 mellinam = ["ங", "ஞ", "ண", "ந", "ம", "ன"]
