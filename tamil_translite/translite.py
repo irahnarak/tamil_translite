@@ -1,8 +1,9 @@
 import json
 import re
 from .olipeyarppu import olipeyarppu
+import pkg_resources
 
-json_file_path = "./tamil_translite/translit_rules.json"
+json_file_path = pkg_resources.resource_filename(__name__, "translit_rules.json")
 
 # Open the file with the absolute path
 with open(json_file_path, "r", encoding="utf-8") as file:
