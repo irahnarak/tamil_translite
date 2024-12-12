@@ -1,0 +1,13 @@
+
+include README.md
+include LICENSE
+
+
+recursive-include tamil_translite *.py
+recursive-include tests *.py
+include tamil_translite/*.json
+
+# Exclude compiled Python files
+global-exclude *.pyc
+global-exclude *.pyo
+exclude *.swp
