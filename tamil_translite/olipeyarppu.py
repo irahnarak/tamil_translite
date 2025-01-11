@@ -46,11 +46,9 @@ def olipeyarppu(word_start, tam_word, prev_comb, next_next_char, next_char):
     elif tam_word == "க" and prev_comb == "று":
         roman_text += "ka"
 
-    elif (
-        prev_comb
-        in [letter + "்" for letter in vallinam + idaiyinam + mellinam + ["ஸ", "ஷ"]]
-        and prev_comb != "ங்"
-    ):
+    elif prev_comb in [
+        letter + "்" for letter in vallinam + idaiyinam + mellinam + ["ஸ", "ஷ"]
+    ]:
 
         if prev_comb == "ன்":
             if tam_word == "று":
@@ -71,13 +69,14 @@ def olipeyarppu(word_start, tam_word, prev_comb, next_next_char, next_char):
             roman_text += ta_rule.get(tam_word, "")
             roman_text += tha_rule.get(tam_word, "")
             roman_text += pa_rule.get(tam_word, "")
+
+        if prev_comb in ["ஞ்", "ங்"]:
+            for key, value in extras.items():
+                if tam_word in [letter + key for letter in vallinam]:
+                    roman_text += value
+
         if roman_text == "":
             roman_text += transliteration_rules["letter_rule"].get(tam_word, "")
-
-    elif prev_comb in ["ஞ்", "ங்"]:
-        for key, value in extras.items():
-            if tam_word in [letter + key for letter in vallinam]:
-                roman_text += value
 
     elif tam_word == "ற்" and next_next_char == "ற":
         roman_text += "t"

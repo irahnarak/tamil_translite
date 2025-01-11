@@ -36,10 +36,10 @@ def translite(tamil_text):
         ):
             ########### const+vowels (like - கி, மீ) ###########
 
-            tam_word = tamil_text[i : i + 2]
-            prev_comb = tamil_text[i - 2 : i]
-            next_next_char = tamil_text[i + 2]
-            next_char = tamil_text[i + 1]
+            tam_word = tamil_text[i : i + 2] if i + 1 < len(tamil_text) else ""
+            prev_comb = tamil_text[i - 2 : i] if i - 2 >= 0 else ""
+            next_next_char = tamil_text[i + 2] if i + 2 < len(tamil_text) else ""
+            next_char = tamil_text[i + 1] if i + 1 < len(tamil_text) else ""
 
             roman_text += olipeyarppu(
                 word_start, tam_word, prev_comb, next_next_char, next_char
@@ -53,9 +53,10 @@ def translite(tamil_text):
 
         elif tamil_text[i] in transliteration_rules["letter_rule"]:
             tam_word = tamil_text[i]
-            next_char = tamil_text[i + 1]
-            prev_comb = tamil_text[i - 2 : i]
-            next_next_char = tamil_text[i + 2]
+            next_char = tamil_text[i + 1] if i + 1 < len(tamil_text) else ""
+            prev_comb = tamil_text[i - 2 : i] if i - 2 >= 0 else ""
+            next_next_char = tamil_text[i + 2] if i + 2 < len(tamil_text) else ""
+
             roman_text += olipeyarppu(
                 word_start, tam_word, prev_comb, next_next_char, next_char
             )

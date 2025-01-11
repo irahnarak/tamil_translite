@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="tamil_translite",
-    version="0.2.5",
+    version="0.2.6",
     description="A package for phonetic transliteration of Tamil text into English.",
     long_description=open("README.md").read(),
     long_description_content_type="text/markdown",
@@ -17,5 +17,5 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires=">=3.6",
+    python_requires=">=3.9",
 )

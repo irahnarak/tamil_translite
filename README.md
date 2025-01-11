@@ -7,11 +7,12 @@
 
 - **Phonetic Transliteration**: Offers transliteration of Tamil words into the Roman alphabet, maintaining their phonetic integrity.
 
-### Examples:
-- கல் → kal
-- பொங்கல் → pongal
-- வருத்தம் → varuththam
-- மருதம் → marudham
+  ### Examples:
+  - கல் → kal
+  - பொங்கல் → pongal
+  - வருத்தம் → varuththam
+  - மருதம் → marudham
+
 
 - **Helpful for Tamil Learners**: Assists individuals learning Tamil by offering an easy-to-use transliteration tool, aiding in pronunciation and comprehension of Tamil words.
 
