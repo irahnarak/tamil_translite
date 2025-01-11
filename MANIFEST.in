@@ -5,7 +5,7 @@ include LICENSE
 
 recursive-include tamil_translite *.py
 recursive-include tests *.py
-include tamil_translite/*.json
+include tamil_translite/translit_rules.json
 
 # Exclude compiled Python files
 global-exclude *.pyc

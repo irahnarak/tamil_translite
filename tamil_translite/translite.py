@@ -1,5 +1,7 @@
 import json
 import re
+import pkg_resources
+
 from .olipeyarppu import olipeyarppu
 import pkg_resources
 
@@ -28,7 +30,7 @@ def translite(tamil_text):
 
     # Identifying patter for special case
     pattern = r"|".join(re.escape(key) for key in special_case.keys())
-    tamil_text = " " + re.sub(pattern, replace_word, tamil_text) + " "
+    tamil_text = re.sub(pattern, replace_word, tamil_text)
     while i < len(tamil_text):
         if (
             i + 1 < len(tamil_text)
@@ -56,7 +58,6 @@ def translite(tamil_text):
             next_char = tamil_text[i + 1] if i + 1 < len(tamil_text) else ""
             prev_comb = tamil_text[i - 2 : i] if i - 2 >= 0 else ""
             next_next_char = tamil_text[i + 2] if i + 2 < len(tamil_text) else ""
-
             roman_text += olipeyarppu(
                 word_start, tam_word, prev_comb, next_next_char, next_char
             )

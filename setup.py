@@ -10,6 +10,10 @@ setup(
     author_email="irahnarak@gmail.com",
     url="https://github.com/irahnarak/tamil_translite",
     packages=find_packages(),
+    package_data={
+        "tamil_translite": ["translit_rules.json"],  # Include the .json file
+    },
+    include_package_data=True,
     tests_require=["pytest"],
     keywords="Tamil, Transliteration, Phonetic, Tamil to English",
     classifiers=[
